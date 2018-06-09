@@ -55,6 +55,10 @@ This version is completed with new docker. Soon updates for travis.
 - This is open-source so no one claim tech we family
 - For personal contract this can do. For personal project not here. We help together
 
+## Donation Support
+
+https://github.com/FndNur1Labs/CryptonoteEvo
+
 ## [  ] Kohaku Team Developer && Cryptonote Family
 
 back to main page : https://github.com/FndNur1Labs/CryptonoteEvo
