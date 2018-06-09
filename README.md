@@ -45,6 +45,8 @@ The Suniaster Version is merge both technology From Bytecoin x Monero with docke
 ## The Suniaster - V2.2
 This version is completed with new docker. Soon updates for travis.
 
+## Project Discontinue jump to V3!
+
 ### Development tree
 - Dev : this for who contribute the works. anyone can do
 - V1-Ruby : this for Old Ruby Version
