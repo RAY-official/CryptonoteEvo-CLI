@@ -13,27 +13,27 @@ namespace parameters {
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER             = 500000000;
 const uint32_t CRYPTONOTE_MAX_BLOCK_BLOB_SIZE          = 500000000;
 const uint32_t CRYPTONOTE_MAX_TX_SIZE                  = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 6;  // addresses start with "2"
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = 114; // addresses start with "L"
 const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW    = 10;
 const uint32_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT      = 60 * 60 * 2;
 
 const uint32_t BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW = 60;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY          = std::numeric_limits<uint64_t>::max(); //this supply you need config
+const uint64_t MONEY_SUPPLY          = UINT64_C(250000000000000); //this supply you need config
 const unsigned EMISSION_SPEED_FACTOR = 18;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 const size_t CRYPTONOTE_REWARD_BLOCKS_WINDOW = 100;
 const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE =
-    100000;  // size of block (bytes) after which reward for block calculated using block size
+    10000000;  // size of block (bytes) after which reward for block calculated using block size
 const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2 = 20000;
 const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1 = 10000;
 // const size_t CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 const size_t CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE = 600; //coinbase size
-const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT       = 8;
-const uint64_t MINIMUM_FEE                          = 1000000;  // pow(10, 6)
-const uint64_t DEFAULT_DUST_THRESHOLD               = 1000000;  // pow(10, 6)
+const size_t CRYPTONOTE_DISPLAY_DECIMAL_POINT       = 6;
+const uint64_t MINIMUM_FEE                          = 1000;  // pow(10, 3)
+const uint64_t DEFAULT_DUST_THRESHOLD               = 1000;  // pow(10, 3)
 
 const uint32_t DIFFICULTY_TARGET = 120;  // seconds
 constexpr uint32_t EXPECTED_NUMBER_OF_BLOCKS_PER_DAY(uint32_t difficulty_target) {
@@ -77,7 +77,7 @@ const char CRYPTONOTE_BLOCKS_FILENAME[]       = "blocks.bin";
 const char CRYPTONOTE_BLOCKINDEXES_FILENAME[] = "blockindexes.bin";
 }  // parameters
 
-const char CRYPTONOTE_NAME[] = "cryptonote"; //this for name your coin
+const char CRYPTONOTE_NAME[] = "LumenCoin"; //this for name your coin
 
 const uint8_t CURRENT_TRANSACTION_VERSION = 1;
 
@@ -85,9 +85,9 @@ const size_t BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT = 10000;  // by default, blo
 const size_t BLOCKS_SYNCHRONIZING_DEFAULT_COUNT     = 100;    // by default, blocks count in blocks downloading
 const size_t COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT  = 1000;
 
-const int P2P_DEFAULT_PORT        = 8080;
-const int RPC_DEFAULT_PORT        = 8081;
-const int WALLET_RPC_DEFAULT_PORT = 8070;
+const int P2P_DEFAULT_PORT        = 6881;
+const int RPC_DEFAULT_PORT        = 8881;
+const int WALLET_RPC_DEFAULT_PORT = 7881;
 
 const size_t P2P_LOCAL_WHITE_PEERLIST_LIMIT = 1000;
 const size_t P2P_LOCAL_GRAY_PEERLIST_LIMIT  = 5000;
@@ -107,7 +107,7 @@ const char P2P_STAT_TRUSTED_PUB_KEY[] = "E29507CA55455F37A3B783EE2C5123B8B6A34A0
 //This For Ico you can remove or not used it
 // COIN - number of smallest units in one coin
 const uint64_t POINT                                         = 1000; // pow(10, 3)
-const uint64_t COIN                                          = 10000000000; // pow(10, 6)
+const uint64_t COIN                                          = 1000000000; // pow(10, 6)
 const uint64_t START_BLOCK_REWARD                            = 100 * POINT;
 const uint64_t ICO_BLOCK_REWARD	                             = 200 * COIN; // 18.4 billion ICO
 const uint64_t MAX_BLOCK_REWARD                              = 10 * COIN;
@@ -124,7 +124,8 @@ static_assert(DEPOSIT_MIN_TERM <= DEPOSIT_MAX_TERM, "Bad DEPOSIT_MAX_TERM");
 static_assert(DEPOSIT_MIN_TERM * DEPOSIT_MAX_TOTAL_RATE > DEPOSIT_MIN_TOTAL_RATE_FACTOR, "Bad DEPOSIT_MIN_TOTAL_RATE_FACTOR or DEPOSIT_MAX_TOTAL_RATE");
 
 const char *const SEED_NODES[] = {
-    "10.0.2.15:8080"};
+    "18.191.90.28:6881",
+    "18.191.233.111:6881"};
 
 struct CheckpointData {
 	uint32_t index;

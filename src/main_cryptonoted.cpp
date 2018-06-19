@@ -25,9 +25,9 @@ Options:
   --allow-local-ip                     Allow local ip add to peer list, mostly in debug purposes.
   --testnet                            Configure for testnet.
   --masternodes                        Configure for masternodes.
-  --p2p-bind-address=<ip:port>         Interface and port for P2P network protocol [default: 0.0.0.0:8080].
-  --p2p-external-port=<port>           External port for P2P network protocol, if port forwarding used with NAT [default: 8080].
-  --cryptonoted-bind-address=<ip:port> Interface and port for bytecoind RPC [default: 127.0.0.1:8081].
+  --p2p-bind-address=<ip:port>         Interface and port for P2P network protocol [default: 0.0.0.0:6881].
+  --p2p-external-port=<port>           External port for P2P network protocol, if port forwarding used with NAT [default: 6881].
+  --cryptonoted-bind-address=<ip:port> Interface and port for bytecoind RPC [default: 127.0.0.1:8881].
   --seed-node-address=<ip:port>        Specify list (one or more) of nodes to start connecting to.
   --priority-node-address=<ip:port>    Specify list (one or more) of nodes to connect to and attempt to keep the connection open.
   --exclusive-node-address=<ip:port>   Specify list (one or more) of nodes to connect to only. All other nodes including seed nodes will be ignored.

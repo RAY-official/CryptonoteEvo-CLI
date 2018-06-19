@@ -31,7 +31,7 @@ Options:
   --export-view-only=<file>            Export view-only version of wallet file with the same password, then exit.
   --export-keys                        Export wallet keys to stdout, then exit.
   --testnet                            Configure for testnet.
-  --walletd-bind-address=<ip:port>     Interface and port for bytecoind RPC [default: 127.0.0.1:8081].
+  --walletd-bind-address=<ip:port>     Interface and port for bytecoind RPC [default: 127.0.0.1:8881].
   --data-folder=<full-path>            Folder for wallet cache, blockchain, logs and peer DB [default: )" platform_DEFAULT_DATA_FOLDER_PATH_PREFIX
     R"(cryptonote].
   --cryptonoted-remote-address=<ip:port> Connect to remote cryptonoted and suppress running built-in cryptonoted.
@@ -39,9 +39,9 @@ Options:
 
 Options for built-in cryptonoted (run when no --cryptonoted-remote-address specified):
   --allow-local-ip                     Allow local ip add to peer list, mostly in debug purposes.
-  --p2p-bind-address=<ip:port>         Interface and port for P2P network protocol [default: 0.0.0.0:8080].
-  --p2p-external-port=<port>           External port for P2P network protocol, if port forwarding used with NAT [default: 8080].
-  --cryptonoted-bind-address=<ip:port>   Interface and port for cryptonoted RPC [default: 0.0.0.0:8081].
+  --p2p-bind-address=<ip:port>         Interface and port for P2P network protocol [default: 0.0.0.0:6881].
+  --p2p-external-port=<port>           External port for P2P network protocol, if port forwarding used with NAT [default: 6881].
+  --cryptonoted-bind-address=<ip:port>   Interface and port for cryptonoted RPC [default: 0.0.0.0:8881].
   --seed-node-address=<ip:port>        Specify list (one or more) of nodes to start connecting to.
   --priority-node-address=<ip:port>    Specify list (one or more) of nodes to connect to and attempt to keep the connection open.
   --exclusive-node-address=<ip:port>   Specify list (one or more) of nodes to connect to only. All other nodes including seed nodes will be ignored.)";
